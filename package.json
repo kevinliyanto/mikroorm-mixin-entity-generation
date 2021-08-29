@@ -1,0 +1,41 @@
+{
+  "name": "mikroorm-mixin-entity-generation",
+  "packageManager": "yarn@3.0.1",
+  "private": true,
+  "devDependencies": {
+    "@mikro-orm/cli": "^4.5.9",
+    "@nestjs/cli": "^8.1.1",
+    "@types/uuid": "^8.3.1",
+    "@yarnpkg/sdks": "^2.4.2-rc.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "typescript": "4.3.5"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^4.5.9",
+    "@mikro-orm/nestjs": "^4.3.0",
+    "@mikro-orm/sqlite": "^4.5.9",
+    "@nestjs/common": "^8.0.6",
+    "@nestjs/core": "^8.0.6",
+    "@nestjs/platform-express": "^8.0.6",
+    "@nestjs/swagger": "^5.0.9",
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.3.0",
+    "source-map-support": "^0.5.19",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist/",
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./config/mikro-orm.ts"
+    ]
+  }
+}
